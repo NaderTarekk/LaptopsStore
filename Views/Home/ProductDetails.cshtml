@@ -1,0 +1,85 @@
+﻿@model TbLaptop
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Product Image -->
+        <div class="col-md-6">
+            <img src="~/images/@Model.LaptopImg" class="img-fluid" alt="Product Image">
+        </div>
+        <!-- Product Details -->
+        <div class="col-md-6">
+            <h2>@Model.Name</h2>
+            <p>Description: @Model.Description</p>
+            <p>Processor: <span class="text-muted">@Model.Proccessor</span></p>
+            <p>Ram: <span class="text-muted">@Model.Ram Ram</span></p>
+            <p>Graphics: <span class="text-muted">@Model.Gpu</span></p>
+            <p>Screen Size: <span class="text-muted">@Model.ScreenSize</span></p>
+            <p>
+                Price: <span class="text-muted">
+                    $@Model.Price
+                    @if (Model.Price > 1000)
+                    {
+                        <del>$@Convert.ToDecimal(Model.Price + 50)</del>
+                        <br />
+                        <span class="badge bg-success mx-2">
+                            @Math.Floor(Convert.ToDecimal((((Model.Price + 50) - Model.Price) / (Model.Price + 50)) * 100))% off
+                        </span>
+                    }
+                </span>
+            </p>
+            @if (Model.IsAvailable == true)
+            {
+                <div class="badge bg-success w-25 text-center">On Stock</div>
+            }
+            else
+            {
+                <div class="badge bg-danger w-25 text-center">Out Of Stock</div>
+            }
+            <br />
+            <!-- Add to Cart Button -->
+            @if (Model.IsAvailable == true)
+            {
+                <a class="btn btn-primary btn-lg mt-3" asp-controller="Home" asp-action="AddProductToLocalStorage" asp-route-id="@Model.Id">Add to Cart</a>
+            }
+            else
+            {
+                <a class="btn btn-secondary btn-lg mt-3" disable>Add to Cart</a>
+            }
+
+            @if (TempData["SuccessSaveInLocalStorage"] != null)
+            {
+                <div class="temp-data alert alert-success mt-3 text-center">
+                    @TempData["SuccessSaveInLocalStorage"]
+                </div>
+            }
+        </div>
+    </div>
+    <!-- Additional Product Details -->
+</div>
+<div class="mt-5">
+    <h3>Related Products</h3>
+    <div class="row">
+        <!-- Related Product 1 -->
+        @foreach (var lap in ViewBag.RelatedProducts)
+        {
+            <div class="col-md-3 mt-3">
+                <div class="card p-3 h-100">
+                    <img src="~/images/@lap.LaptopImg" class="card-img-top" style=" height: 200px;" alt="Related Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">@lap.Name</h5>
+                        <p class="card-text">$@lap.Price</p>
+                        <a class="btn btn-primary" asp-controller="Home" asp-action="ProductDetails" asp-route-id="@lap.Id">View Details</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+@section Scripts {
+    <script>
+
+        setTimeout(function () {
+            $('.temp-data').fadeOut('slow');
+        }, 4000);
+    </script>
+}

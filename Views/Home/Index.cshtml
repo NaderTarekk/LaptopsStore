@@ -1,0 +1,55 @@
+﻿@model List<TbLaptop>
+
+<div class="mt-5">
+    <div class="d-flex justify-content-between">
+        <div>
+            Category :
+            <select class="form-control w-100 mb-3" asp-items="@(new SelectList(ViewBag.Categories, "CategoryName", "CategoryName"))"
+                    onchange="SearchByCategory(this)">
+                <option>Select :</option>
+                <option value="All">All Categories</option>
+                @* <option value="{{cat}}" *ngFor="let cat of Categories">{{cat}}</option> *@
+            </select>
+        </div>
+        <div>
+            Max Price :
+            <select class="form-control w-100 mb-3" asp-items="@(new SelectList(ViewBag.Prices, "Price", "Price"))"
+                    onchange="SearchByPrice(this)">
+                <option>Select :</option>
+                <option value="0">All Prices</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        @foreach (var lap in Model)
+        {
+            <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let item of products">
+                <div class="card h-100 p-2">
+                    <div style="height: 200px; overflow: hidden;">
+                        <img src="~/images/@lap.LaptopImg" style="height: 100%;" class="card-img-top"
+                             alt="{{item.model}}">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@lap.Name</h5>
+                        <p class="card-text"><strong>Description:</strong> @lap.Description</p>
+                        <h4 class="card-title">$@lap.Price</h4>
+                        <a class="btn btn-primary" asp-controller="Home" asp-action="ProductDetails" asp-route-id="@lap.Id">Details</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+@section Scripts {
+    <script>
+        function SearchByCategory(dropdown) {
+            var cat = $(dropdown).val();
+            window.location.href = "/Home/SelectCategory?cat=" + cat;
+        }
+        function SearchByPrice(dropdown) {
+            var price = $(dropdown).val();
+            window.location.href = "/Home/SelectPrice?price=" + price;
+        }
+    </script>
+}

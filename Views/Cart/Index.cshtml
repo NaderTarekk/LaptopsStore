@@ -1,0 +1,80 @@
+﻿@model CartModel
+
+<div class="container mt-5">
+    <h2>Your Shopping Cart</h2>
+    <a class="btn btn-outline-danger" asp-controller="Cart" asp-action="ClearAllProducts">Clear All Cart</a>
+    <div class="row">
+
+        <div class="col-md-8">
+            @foreach (var lap in Model.lstItems)
+            {
+                <div class="card mt-2">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="~/images/@lap.ProductImage" class="w-100">
+                            </div>
+                            <div class="col-md-9">
+                                <h3 class="card-text text-danger">@lap.ProductName</h3>
+                                <div class="d-flex align-items-center">
+                                    <strong>Quantity:</strong>
+                                    <a class="btn btn-dark mx-2" asp-controller="Cart" asp-action="DecreaseQuantity" asp-route-id="@lap.ProductId">-</a>
+                                    <div class="mx-2">
+                                        <input type="text" class="form-control text-center" readonly value="@lap.Qty">
+                                    </div>
+                                    <a class="btn btn-dark" asp-controller="Cart" asp-action="IncreaseQuantity" asp-route-id="@lap.ProductId">+</a>
+                                </div>
+                                <p class="card-text"><strong>Price: $</strong>@lap.Price</p>
+                                <p class="card-text"><strong>Total: $</strong>@lap.Total</p>
+                                <a class="btn btn-danger" asp-controller="Cart" asp-action="RemoveProduct" asp-route-id="@lap.ProductId">Remove</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Cart Summary</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Subtotal
+                            <span class="badge bg-primary" *ngIf="CartProducts.length != 0">$@Model.Total</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Tax
+                            <span class="badge bg-primary" *ngIf="CartProducts.length != 0">$9.00</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Total
+                            <span class="badge bg-primary" *ngIf="CartProducts.length != 0">
+                                @if (Model.lstItems.Count != 0)
+                                {
+                                    <span>$@(Model.Total + 9)</span>
+                                }
+                                else
+                                {
+                                    <span>$@Model.Total</span>
+                                }
+                            </span>
+                        </li>
+                    </ul>
+                    @if (Model.lstItems.Count != 0)
+                    {
+                        <a class="btn btn-primary btn-block mt-3" asp-controller="Cart" asp-action="Checkout">Checkout</a>
+                    }
+                    else
+                    {
+                        <a class="btn btn-secondary btn-block mt-3">Checkout</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (TempData["CheckoutStatus"] != null)
+{
+    <div class="alert alert-@TempData["color"] text-center mt-5">@TempData["CheckoutStatus"]</div>
+}

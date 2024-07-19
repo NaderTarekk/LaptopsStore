@@ -1,0 +1,773 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ecommerce.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ecommerce.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\A1.jpg",
+      "PackagePath": "staticwebassets\\images\\A1.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\A2.jpg",
+      "PackagePath": "staticwebassets\\images\\A2.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\A3.jpg",
+      "PackagePath": "staticwebassets\\images\\A3.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\A4.jpg",
+      "PackagePath": "staticwebassets\\images\\A4.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\A5.jpg",
+      "PackagePath": "staticwebassets\\images\\A5.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\A6.jpg",
+      "PackagePath": "staticwebassets\\images\\A6.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\A7.jpg",
+      "PackagePath": "staticwebassets\\images\\A7.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\A8.jpg",
+      "PackagePath": "staticwebassets\\images\\A8.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\D1.jpg",
+      "PackagePath": "staticwebassets\\images\\D1.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\D2.jpg",
+      "PackagePath": "staticwebassets\\images\\D2.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\D3.jpg",
+      "PackagePath": "staticwebassets\\images\\D3.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\D4.jpg",
+      "PackagePath": "staticwebassets\\images\\D4.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\D5.jpg",
+      "PackagePath": "staticwebassets\\images\\D5.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\D6.jpg",
+      "PackagePath": "staticwebassets\\images\\D6.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\D7.jpg",
+      "PackagePath": "staticwebassets\\images\\D7.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\D8.jpg",
+      "PackagePath": "staticwebassets\\images\\D8.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\D9.jpg",
+      "PackagePath": "staticwebassets\\images\\D9.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\H1.jpg",
+      "PackagePath": "staticwebassets\\images\\H1.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\H10.jpg",
+      "PackagePath": "staticwebassets\\images\\H10.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\H11.jpg",
+      "PackagePath": "staticwebassets\\images\\H11.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\H12.jpg",
+      "PackagePath": "staticwebassets\\images\\H12.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\H2.jpg",
+      "PackagePath": "staticwebassets\\images\\H2.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\H3.jpg",
+      "PackagePath": "staticwebassets\\images\\H3.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\H4.jpg",
+      "PackagePath": "staticwebassets\\images\\H4.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\H5.jpg",
+      "PackagePath": "staticwebassets\\images\\H5.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\H6.jpg",
+      "PackagePath": "staticwebassets\\images\\H6.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\H7.jpg",
+      "PackagePath": "staticwebassets\\images\\H7.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\H8.jpg",
+      "PackagePath": "staticwebassets\\images\\H8.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\H9.jpg",
+      "PackagePath": "staticwebassets\\images\\H9.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\M1.jpg",
+      "PackagePath": "staticwebassets\\images\\M1.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\M10.jpg",
+      "PackagePath": "staticwebassets\\images\\M10.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\M11.jpg",
+      "PackagePath": "staticwebassets\\images\\M11.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\M12.jpg",
+      "PackagePath": "staticwebassets\\images\\M12.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\M2.jpg",
+      "PackagePath": "staticwebassets\\images\\M2.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\M3.jpg",
+      "PackagePath": "staticwebassets\\images\\M3.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\M4.jpg",
+      "PackagePath": "staticwebassets\\images\\M4.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\M5.jpg",
+      "PackagePath": "staticwebassets\\images\\M5.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\M6.jpg",
+      "PackagePath": "staticwebassets\\images\\M6.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\M7.jpg",
+      "PackagePath": "staticwebassets\\images\\M7.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\M8.jpg",
+      "PackagePath": "staticwebassets\\images\\M8.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\M9.jpg",
+      "PackagePath": "staticwebassets\\images\\M9.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\MS1.jpg",
+      "PackagePath": "staticwebassets\\images\\MS1.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\MS10.jpg",
+      "PackagePath": "staticwebassets\\images\\MS10.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\MS11.jpg",
+      "PackagePath": "staticwebassets\\images\\MS11.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\MS12.jpg",
+      "PackagePath": "staticwebassets\\images\\MS12.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\MS2.jpg",
+      "PackagePath": "staticwebassets\\images\\MS2.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\MS3.jpg",
+      "PackagePath": "staticwebassets\\images\\MS3.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\MS4.jpg",
+      "PackagePath": "staticwebassets\\images\\MS4.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\MS5.jpg",
+      "PackagePath": "staticwebassets\\images\\MS5.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\MS6.jpg",
+      "PackagePath": "staticwebassets\\images\\MS6.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\MS7.jpg",
+      "PackagePath": "staticwebassets\\images\\MS7.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\MS8.jpg",
+      "PackagePath": "staticwebassets\\images\\MS8.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\MS9.jpg",
+      "PackagePath": "staticwebassets\\images\\MS9.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\S1.jpg",
+      "PackagePath": "staticwebassets\\images\\S1.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\S2.jpg",
+      "PackagePath": "staticwebassets\\images\\S2.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\S3.jpg",
+      "PackagePath": "staticwebassets\\images\\S3.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\S4.jpg",
+      "PackagePath": "staticwebassets\\images\\S4.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\S5.jpg",
+      "PackagePath": "staticwebassets\\images\\S5.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\S6.jpg",
+      "PackagePath": "staticwebassets\\images\\S6.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\S7.jpg",
+      "PackagePath": "staticwebassets\\images\\S7.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\S8.jpg",
+      "PackagePath": "staticwebassets\\images\\S8.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X1.jpg",
+      "PackagePath": "staticwebassets\\images\\X1.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X10.jpg",
+      "PackagePath": "staticwebassets\\images\\X10.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X11.jpg",
+      "PackagePath": "staticwebassets\\images\\X11.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X12.jpg",
+      "PackagePath": "staticwebassets\\images\\X12.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X13.jpg",
+      "PackagePath": "staticwebassets\\images\\X13.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X14.jpg",
+      "PackagePath": "staticwebassets\\images\\X14.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X15.jpg",
+      "PackagePath": "staticwebassets\\images\\X15.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X16.jpg",
+      "PackagePath": "staticwebassets\\images\\X16.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X17.jpg",
+      "PackagePath": "staticwebassets\\images\\X17.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X18.jpg",
+      "PackagePath": "staticwebassets\\images\\X18.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X19.jpg",
+      "PackagePath": "staticwebassets\\images\\X19.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X2.jpg",
+      "PackagePath": "staticwebassets\\images\\X2.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X20.jpg",
+      "PackagePath": "staticwebassets\\images\\X20.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X21.jpg",
+      "PackagePath": "staticwebassets\\images\\X21.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X22.jpg",
+      "PackagePath": "staticwebassets\\images\\X22.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X23.jpg",
+      "PackagePath": "staticwebassets\\images\\X23.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X24.jpg",
+      "PackagePath": "staticwebassets\\images\\X24.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X25.jpg",
+      "PackagePath": "staticwebassets\\images\\X25.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X26.jpg",
+      "PackagePath": "staticwebassets\\images\\X26.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X27.jpg",
+      "PackagePath": "staticwebassets\\images\\X27.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X28.jpg",
+      "PackagePath": "staticwebassets\\images\\X28.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X29.jpg",
+      "PackagePath": "staticwebassets\\images\\X29.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X3.jpg",
+      "PackagePath": "staticwebassets\\images\\X3.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X30.jpg",
+      "PackagePath": "staticwebassets\\images\\X30.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X31.jpg",
+      "PackagePath": "staticwebassets\\images\\X31.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X32.jpg",
+      "PackagePath": "staticwebassets\\images\\X32.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X33.jpg",
+      "PackagePath": "staticwebassets\\images\\X33.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X34.jpg",
+      "PackagePath": "staticwebassets\\images\\X34.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X35.jpg",
+      "PackagePath": "staticwebassets\\images\\X35.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X36.jpg",
+      "PackagePath": "staticwebassets\\images\\X36.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X37.jpg",
+      "PackagePath": "staticwebassets\\images\\X37.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X38.jpg",
+      "PackagePath": "staticwebassets\\images\\X38.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X39.jpg",
+      "PackagePath": "staticwebassets\\images\\X39.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X4.jpg",
+      "PackagePath": "staticwebassets\\images\\X4.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X40.jpg",
+      "PackagePath": "staticwebassets\\images\\X40.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X41.jpg",
+      "PackagePath": "staticwebassets\\images\\X41.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X42.jpg",
+      "PackagePath": "staticwebassets\\images\\X42.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X43.jpg",
+      "PackagePath": "staticwebassets\\images\\X43.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X44.jpg",
+      "PackagePath": "staticwebassets\\images\\X44.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X45.jpg",
+      "PackagePath": "staticwebassets\\images\\X45.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X46.jpg",
+      "PackagePath": "staticwebassets\\images\\X46.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X47.jpg",
+      "PackagePath": "staticwebassets\\images\\X47.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X48.jpg",
+      "PackagePath": "staticwebassets\\images\\X48.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X49.jpg",
+      "PackagePath": "staticwebassets\\images\\X49.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X5.jpg",
+      "PackagePath": "staticwebassets\\images\\X5.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X50.jpg",
+      "PackagePath": "staticwebassets\\images\\X50.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X51.jpg",
+      "PackagePath": "staticwebassets\\images\\X51.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X52.jpg",
+      "PackagePath": "staticwebassets\\images\\X52.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X53.jpg",
+      "PackagePath": "staticwebassets\\images\\X53.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X54.jpg",
+      "PackagePath": "staticwebassets\\images\\X54.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X6.jpg",
+      "PackagePath": "staticwebassets\\images\\X6.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X7.jpg",
+      "PackagePath": "staticwebassets\\images\\X7.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X8.jpg",
+      "PackagePath": "staticwebassets\\images\\X8.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\X9.jpg",
+      "PackagePath": "staticwebassets\\images\\X9.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\l1.jpg",
+      "PackagePath": "staticwebassets\\images\\l1.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\l10.jpg",
+      "PackagePath": "staticwebassets\\images\\l10.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\l11.jpg",
+      "PackagePath": "staticwebassets\\images\\l11.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\l12.jpg",
+      "PackagePath": "staticwebassets\\images\\l12.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\l2.jpg",
+      "PackagePath": "staticwebassets\\images\\l2.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\l3.jpg",
+      "PackagePath": "staticwebassets\\images\\l3.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\l4.jpg",
+      "PackagePath": "staticwebassets\\images\\l4.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\l5.jpg",
+      "PackagePath": "staticwebassets\\images\\l5.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\l6.jpg",
+      "PackagePath": "staticwebassets\\images\\l6.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\l7.jpg",
+      "PackagePath": "staticwebassets\\images\\l7.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\l8.jpg",
+      "PackagePath": "staticwebassets\\images\\l8.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\images\\l9.jpg",
+      "PackagePath": "staticwebassets\\images\\l9.jpg"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\C# Training projects\\ecommerce\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ecommerce.props",
+      "PackagePath": "build\\ecommerce.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ecommerce.props",
+      "PackagePath": "buildMultiTargeting\\ecommerce.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ecommerce.props",
+      "PackagePath": "buildTransitive\\ecommerce.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ecommerce.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

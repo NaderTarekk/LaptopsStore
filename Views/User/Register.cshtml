@@ -1,0 +1,57 @@
+﻿@model UserModel
+
+<div class="mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    Register
+                </div>
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data" asp-controller="User" asp-action="Register">
+                        <div asp-validation-summary="ModelOnly" class="text-danger">
+                        </div>
+                        <div class="form-group">
+                            <label for="username">First name</label>
+                            <input type="text" id="username" class="form-control" asp-for="FirstName">
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="username2">Last name</label>
+                            <input type="text" id="username2" class="form-control" asp-for="LastName">
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" asp-for="Email">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" class="form-control" asp-for="Password">
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="Location">Location</label>
+                            <input type="text" id="Location" class="form-control" asp-for="Location">
+                            <span asp-validation-for="Location" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="PhoneNumber">Phone Number</label>
+                            <input type="text" id="PhoneNumber" class="form-control" asp-for="PhoneNumber">
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="photo">Insert your photo</label>
+                            <input type="file" id="photo" class="form-control" name="imageFile">
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <button type="submit" class="mt-3 btn btn-primary">Register</button>
+                            <a href="/user/login" class="mx-1 mt-3">Login</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

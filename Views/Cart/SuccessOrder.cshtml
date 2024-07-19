@@ -1,0 +1,79 @@
+﻿@model List<CartModel>
+
+<div class="container mt-5">
+    @if (Model.Count != 0)
+    {
+        <div class="card">
+            <div class="card-header bg-success text-white text-center">
+                <h2>Order Successful!</h2>
+            </div>
+            <div class="card-body">
+                <p class="text-center">Thank you for your purchase! Your order has been placed successfully.</p>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <h4>Order Details</h4>
+                        @foreach (var product in Model)
+                        {
+                            @if (DateTime.Now >= product.Date.AddDays(3))
+                            {
+                                <p class="alert alert-success w-50 text-center">Arrived Successfully</p>
+                            }
+                            else
+                            {
+                                <p class="alert alert-warning w-50 text-center">Not Arrived Yet</p>
+                            }
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Quantity</th>
+                                        <th>Price</th>
+                                        <th>Total</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in product.lstItems)
+                                    {
+                                        <tr>
+                                            <td>@item.ProductName</td>
+                                            <td>@item.Qty</td>
+                                            <td>$@item.Price</td>
+                                            <td>$@item.Total</td>
+                                            <td>@product.Date</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <div class="d-flex">
+                                <span><strong class="text-danger">Total: </strong>$@product.Total</span>
+                                <span class="mx-5"><strong class="text-danger">Arrived Date: </strong>@product.Date.AddDays(3).ToString("d/MM/yyyy")</span>
+                                @if (product.Date < product.Date.AddDays(3))
+                                {
+                                    <a class="btn btn-danger" asp-controller="Cart" asp-action="CancelOrder" asp-route-id="@product.Id">Cancel Order</a>
+                                }
+                            </div>
+                            <hr />
+                        }
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Shipping Details</h4>
+                        <p><strong>Name:</strong> @ViewBag.UserDetails.FirstName @ViewBag.UserDetails.LastName</p>
+                        <p><strong>Address:</strong> @ViewBag.UserDetails.Location</p>
+                        <p><strong>Email:</strong> @ViewBag.UserDetails.Email</p>
+                        <p><strong>Phone:</strong> @ViewBag.UserDetails.PhoneNumber</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-center">
+                <a href="~/" class="btn btn-primary">Continue Shopping</a>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="d-flex justify-content-center align-items-center p-5" style="border: 3px solid red; width: max-content; margin: auto;">
+            <h1 class="text-danger">no orders added yet</h1>
+        </div>
+    }
+</div>

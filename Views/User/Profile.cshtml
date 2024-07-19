@@ -1,0 +1,400 @@
+﻿@model ApplicationUser
+@using ecommerce.Models
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> signInManager
+@inject UserManager<ApplicationUser> userManager
+
+<style>
+    /* Custom CSS for the profile page */
+    .profile-card {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="container">
+    <div class="profile-card">
+        <div class="text-center">
+            @{
+                // Convert byte array to base64 string for image src attribute
+                string base64Image = Model.ImageData != null ? Convert.ToBase64String(Model.ImageData) : "";
+            }
+            <img src="data:image/jpeg;base64,@base64Image" alt="Profile Picture" class="profile-image">
+            <h1>@Model.FirstName @Model.LastName</h1>
+            <p class="text-muted">@ViewBag.Role</p>
+        </div>
+        <hr>
+        <div class="row">
+            <form method="post" asp-controller="User" asp-action="ChangeEmail">
+                <div class="col-md-12 d-flex justify-content-between align-items-center">
+                    <div>
+                        @if (TempData["Code"] == null)
+                        {
+                            <p id="ShowEmailInput"><strong>Email:</strong> @Model.Email</p>
+                        }
+                        <p id="ShowEmailInput2" style="display: none;">
+                            <input type="email" name="emailChange" class="form-control" placeholder="Enter new email" />
+                            @if (TempData["AlertMessage"] != null)
+                            {
+                                <div class="temp-data alert alert-@TempData["Color"]" role="alert">
+                                    @TempData["AlertMessage"]
+                                </div>
+                            }
+                        </p>
+                        @if (TempData["Code"] != null)
+                        {
+                            <input type="text" class="form-control" name="code" placeholder="Enter Code" />
+                        }
+                    </div>
+                    <div>
+                        @if (TempData["Code"] == null)
+                        {
+                            <p><a id="btn1" onclick="hideOtherButton(this)" class="btn btn-primary">Change</a></p>
+                        }
+                        <p class="d-flex">
+                            <button id="btn2" onclick="hideOtherButton(this)" asp-controller="User" asp-action="SendCode" style="display: none;"
+                                    class="btn btn-primary">
+                                Send Code
+                            </button>
+                            <button id="cancelButton" onclick="ShowChange3()" type="button" style="display: none; margin-left: 10px;"
+                                    class="btn btn-danger">
+                                Cancel
+                            </button>
+                        </p>
+                        @if (TempData["Code"] != null)
+                        {
+                            <input type="hidden" name="RCode" asp-for="@TempData["Code"]" />
+                            <button type="submit" class="btn btn-primary mb-3">Confirm</button>
+                        }
+                    </div>
+                </div>
+            </form>
+            <form method="post" asp-controller="User" asp-action="ChangeLocation">
+                <div class="col-md-12 d-flex justify-content-between align-items-center">
+                    <div>
+                        <p id="ShowEmailInput3"><strong>Location:</strong> @Model.Location</p>
+                        <p id="ShowEmailInput4" style="display: none;">
+                            <input type="text" name="locationChange" class="form-control" placeholder="Enter new location" />
+                            @if (TempData["AlertMessage2"] != null)
+                            {
+                                <div class="temp-data alert alert-@TempData["Color"]" role="alert">
+                                    @TempData["AlertMessage2"]
+                                </div>
+                            }
+                        </p>
+                    </div>
+                    <div>
+                        <p><a id="btn3" onclick="hideOtherButton2(this)" class="btn btn-primary">Change</a></p>
+                        <p class="d-flex">
+                            <button id="btn4" onclick="hideOtherButton2(this)" type="submit" style="display: none;"
+                                    class="btn btn-primary">
+                                Save
+                            </button>
+                            <button id="cancelButton2" onclick="ShowChange2()" type="button" style="display: none; margin-left: 10px;"
+                                    class="btn btn-danger">
+                                Cancel
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </form>
+            <form method="post" asp-controller="User" asp-action="ChangePhone">
+                <div class="col-md-12 d-flex justify-content-between align-items-center">
+                    <div>
+                        <p id="ShowEmailInput5"><strong>Phone:</strong> (+20) @Model.PhoneNumber</p>
+                        <p id="ShowEmailInput6" style="display: none;">
+                            <input type="text" name="phoneChange" class="form-control" placeholder="Enter new phone" />
+                            @if (TempData["AlertMessage3"] != null)
+                            {
+                                <div class="temp-data alert alert-@TempData["Color"]" role="alert">
+                                    @TempData["AlertMessage3"]
+                                </div>
+                            }
+                        </p>
+                    </div>
+                    <div>
+                        <p><a id="btn5" onclick="hideOtherButton3(this)" class="btn btn-primary">Change</a></p>
+                        <p class="d-flex">
+                            <button id="btn6" onclick="hideOtherButton3(this)" type="submit" style="display: none;"
+                                    class="btn btn-primary">
+                                Save
+                            </button>
+                            <button id="cancelButton3" onclick="ShowChange()" type="button" style="display: none; margin-left: 10px;"
+                                    class="btn btn-danger">
+                                Cancel
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </form>
+            <div>
+                <form method="post" asp-controller="User" asp-action="ChangePassword">
+                    <div style="display: none;" id="password-inputs">
+                        <div class="d-flex align-items-center">
+                            <input type="password" class="form-control" name="currentPassword" placeholder="Current Password" />
+                        </div>
+                        <div class="d-flex my-2 align-items-center">
+                            <input type="password" class="form-control" name="newPassword" placeholder="New Password" />
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password" />
+                        </div>
+                    </div>
+                    @if (TempData["VerificationMessage"] != null)
+                    {
+                        <div class="temp-data alert alert-@TempData["Color"]" role="alert">
+                            @TempData["VerificationMessage"]
+                        </div>
+                    }
+                    <div class="d-flex align-items-center">
+                        @if (TempData["Code2"] == null)
+                        {
+                            <button type="button" id="ChangePasswordBtn" class="btn btn-dark" onclick="ShowPasswordInputs()">Change password</button>
+                        }
+                        <button type="submit" class="btn btn-primary w-100" id="savePasswordBtn" style="display: none;">Save Changes</button>
+                        <button id="passwordCancelBtn" onclick="HidePasswordInputs()" type="button" style="display: none; margin-left: 10px;"
+                                class="btn btn-danger">
+                            Cancel
+                        </button>
+                    </div>
+                    @if (TempData["AlertMessage5"] != null)
+                    {
+                        <div class="temp-data alert alert-@TempData["Color"]" role="alert">
+                            @TempData["AlertMessage5"]
+                        </div>
+                    }
+                    @if (TempData["ShowNewPassword"] == null)
+                    {
+                        @if (TempData["Code2"] == null)
+                        {
+                            <button class="btn btn-dark mx-1 mt-3" type="button" id="forgetPasswordBtn" onclick="OnForgetPassword()">Forget password</button>
+                            if (TempData["VerificationMessage2"] != null)
+                            {
+                                <div class="temp-data alert alert-@TempData["Color"]" role="alert">
+                                    @TempData["VerificationMessage2"]
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <div class="d-flex justify-content-between w-100 mt-3">
+                                <input type="text" placeholder="Enter Code" class="form-control w-25" name="userCode" />
+                                <button class="btn btn-primary" asp-controller="User" asp-action="ForgetPasswordUserCode">Confirm</button>
+                            </div>
+                        }
+
+                    }
+                    else
+                    {
+                        <div class="d-flex justify-content-between">
+                            <input type="password" class="form-control" name="newPassword2" placeholder="Enter new password" />
+                            <input type="password" class="form-control" name="confirmNewPassword" placeholder="Confirm password" />
+                            <button class="btn btn-primary" asp-controller="User" asp-action="SaveNewPassword">Save</button>
+                        </div>
+                        
+                        if (TempData["ShowNewPassword2"] != null)
+                        {
+                            <div class="alert alert-@TempData["Color"]" role="alert">
+                                not match password
+                            </div>
+                        }
+                    }
+                    <input type="hidden" name="Rcode" asp-for="@TempData["Code2"]" />
+                    <div style="display: none;" id="ShowForgetInputAndBtn" class="w-100">
+                        <form method="post" asp-controller="User" asp-action="">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <input type="text" placeholder="Enter your email" class="form-control w-50" name="forgetEmail" />
+                                <div>
+                                    <button class="btn btn-primary" asp-controller="User" asp-action="ForgetPasswordSendCode">Send Code</button>
+                                    <button class="btn btn-danger" onclick="CancelForgetPassword()">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    @if (TempData["AlertMessage4"] != null)
+                    {
+                        <div class="temp-data alert alert-@TempData["Color"] w-25 mt-3" role="alert">
+                            @TempData["AlertMessage4"]
+                        </div>
+                    }
+
+                </form>
+                <a class="btn btn-success mt-3" asp-controller="Cart" asp-action="SuccessOrder">Show Orders</a>
+            </div>
+        </div>
+        <hr>
+        <a onclick="ShowPasswordAndDeleteAccountBtn()" id="DeleteAccountBtn" class="btn btn-outline-danger">Delete Account</a>
+        <form method="post" asp-controller="User" asp-action="DeleteAccount" id="DeleteInputAndBtn" style="display: none;">
+            <input type="password" class="form-control w-50" name="password" placeholder="Enter your password" />
+            <button asp-controller="User" asp-action="DeleteAccount" type="submit" class="mt-2 btn btn-danger">Delete Account</button>
+        </form>
+        @if (TempData["DeleteWrongPasswordMessage"] != null)
+        {
+            <div class="mt-2 temp-data alert alert-@TempData["Color"]" role="alert">
+                @TempData["DeleteWrongPasswordMessage"]
+            </div>
+        }
+        <p>
+            Take care, you are about to remove your account.
+        </p>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function hideOtherButton(clickedButton) {
+            // Get the ID of the clicked button
+            var clickedButtonId = clickedButton.id;
+            var EmailInput = document.getElementById("ShowEmailInput2");
+            var Email = document.getElementById("ShowEmailInput");
+
+            // Determine the ID of the other button
+            var otherButtonId = clickedButtonId === 'btn1' ? 'btn2' : 'btn1';
+            var otherButtonId2 = clickedButtonId === 'btn1' ? 'btn1' : 'btn2';
+
+            if (otherButtonId === "btn2") {
+                EmailInput.style.display = 'block';
+                Email.style.display = 'none';
+                document.getElementById("cancelButton").style.display = 'block';
+            } else {
+                // EmailInput.style.display = 'none';
+                Email.style.display = 'block';
+            }
+            // Hide the other button
+            document.getElementById(otherButtonId).style.display = 'block';
+            document.getElementById(otherButtonId2).style.display = 'none';
+        }
+        function hideOtherButton2(clickedButton) {
+            // Get the ID of the clicked button
+            var clickedButtonId = clickedButton.id;
+            var EmailInput = document.getElementById("ShowEmailInput4");
+            var Email = document.getElementById("ShowEmailInput3");
+
+            // Determine the ID of the other button
+            var otherButtonId = clickedButtonId === 'btn3' ? 'btn4' : 'btn3';
+            var otherButtonId2 = clickedButtonId === 'btn3' ? 'btn3' : 'btn4';
+
+            if (otherButtonId === "btn4") {
+                EmailInput.style.display = 'block';
+                Email.style.display = 'none';
+                document.getElementById("cancelButton2").style.display = 'block';
+            } else {
+                // EmailInput.style.display = 'none';
+                Email.style.display = 'block';
+            }
+            // Hide the other button
+            document.getElementById(otherButtonId).style.display = 'block';
+            document.getElementById(otherButtonId2).style.display = 'none';
+        }
+        function hideOtherButton3(clickedButton) {
+            // Get the ID of the clicked button
+            var clickedButtonId = clickedButton.id;
+            var EmailInput = document.getElementById("ShowEmailInput6");
+            var Email = document.getElementById("ShowEmailInput5");
+
+            // Determine the ID of the other button
+            var otherButtonId = clickedButtonId === 'btn5' ? 'btn6' : 'btn5';
+            var otherButtonId2 = clickedButtonId === 'btn5' ? 'btn5' : 'btn6';
+
+            if (otherButtonId === "btn6") {
+                EmailInput.style.display = 'block';
+                Email.style.display = 'none';
+                document.getElementById("cancelButton3").style.display = 'block';
+            } else {
+                // EmailInput.style.display = 'none';
+                Email.style.display = 'block';
+            }
+            // Hide the other button
+            document.getElementById(otherButtonId).style.display = 'block';
+            document.getElementById(otherButtonId2).style.display = 'none';
+        }
+
+        function ShowChange() {
+            var EmailInput = document.getElementById("ShowEmailInput6");
+            var Email = document.getElementById("ShowEmailInput5");
+            document.getElementById("btn5").style.display = 'block';
+            document.getElementById("btn6").style.display = 'none';
+            document.getElementById("cancelButton3").style.display = 'none';
+            Email.style.display = 'block';
+            EmailInput.style.display = 'none';
+        }
+
+        function ShowChange2() {
+            var EmailInput = document.getElementById("ShowEmailInput4");
+            var Email = document.getElementById("ShowEmailInput3");
+            document.getElementById("btn3").style.display = 'block';
+            document.getElementById("btn4").style.display = 'none';
+            document.getElementById("cancelButton2").style.display = 'none';
+            Email.style.display = 'block';
+            EmailInput.style.display = 'none';
+        }
+
+        function ShowChange3() {
+            var EmailInput = document.getElementById("ShowEmailInput2");
+            var Email = document.getElementById("ShowEmailInput");
+            document.getElementById("btn1").style.display = 'block';
+            document.getElementById("btn2").style.display = 'none';
+            document.getElementById("cancelButton").style.display = 'none';
+            Email.style.display = 'block';
+            EmailInput.style.display = 'none';
+        }
+
+        var inputs = document.getElementById("password-inputs");
+        var cancelBtn = document.getElementById("passwordCancelBtn");
+        var saveBtn = document.getElementById("savePasswordBtn");
+        var changeBtn = document.getElementById("ChangePasswordBtn");
+        var forgetBtn = document.getElementById("forgetPasswordBtn");
+        var ShowForgetInputAndBtn = document.getElementById("ShowForgetInputAndBtn");
+
+        function ShowPasswordInputs() {
+            inputs.style.display = 'block';
+            cancelBtn.style.display = 'block';
+            saveBtn.style.display = 'block';
+            changeBtn.style.display = 'none';
+            forgetBtn.style.display = 'none';
+        }
+
+        function HidePasswordInputs() {
+            inputs.style.display = 'none';
+            cancelBtn.style.display = 'none';
+            saveBtn.style.display = 'none';
+            changeBtn.style.display = 'block';
+            forgetBtn.style.display = 'block';
+        }
+
+        function ShowPasswordAndDeleteAccountBtn() {
+            var saveBtn = document.getElementById("DeleteAccountBtn");
+            var InputBtn = document.getElementById("DeleteInputAndBtn");
+            saveBtn.style.display = 'none';
+            InputBtn.style.display = 'block';
+        }
+
+        function CancelForgetPassword() {
+            ShowForgetInputAndBtn.style.display = 'none'
+            forgetBtn.style.display = 'block'
+            changeBtn.style.display = 'block';
+        }
+        function OnForgetPassword() {
+            ShowForgetInputAndBtn.style.display = 'block'
+            forgetBtn.style.display = 'none'
+            changeBtn.style.display = 'none';
+        }
+
+        setTimeout(function () {
+            $('.temp-data').fadeOut('slow');
+        }, 4000);
+    </script>
+}
